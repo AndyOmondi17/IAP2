@@ -38,12 +38,10 @@
               <td class="px-6 py-4 whitespace-nowrap">
                 
                 <a href="{{route('books.show',$book->id)}}" class="text-blue-600 hover:text-blue-900 mb-2 mr-2">View
-                <a href="{{route('books.edit',$book->id)}}" class="text-indigo-600 hover:text-indigo-900 mb-2 mr-2">Edit
+                <!-- <a href="{{route('books.edit',$book->id)}}" class="text-indigo-600 hover:text-indigo-900 mb-2 mr-2">Edit -->
                 <form class="inline-block" action="{route('books.destroy',$book->id)}">
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
-                    <input type="submit" value="DELETE" class="text-red-600 hover:text-red-900 mb-2 mr-2">
-                
                 </form>
             </td>
             </tr>

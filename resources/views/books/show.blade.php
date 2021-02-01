@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Show Task
+            Show Book
         </h2>
     </x-slot>
 
@@ -17,10 +17,10 @@
                             <table class="min-w-full divide-y divide-gray-200 w-full">
                                 <tr class="border-b">
                                     <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        ID
+                                        Name
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 bg-white divide-y divide-gray-200">
-                                        {{ $book->id }}
+                                        {{ $book->name }}
                                     </td>
                                 </tr>
                                 <tr class="border-b">
@@ -30,8 +30,36 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 bg-white divide-y divide-gray-200">
                                         {{ $book->description }}
                                     </td>
+                                 </tr>
+                                 <tr class="border-b">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Price
+                                    </th>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 bg-white divide-y divide-gray-200">
+                                        {{ $book->price }}
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Category
+                                    </th>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 bg-white divide-y divide-gray-200">
+                                        {{ $book->category }}
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Image
+                                    </th>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 bg-white divide-y divide-gray-200">
+                                        
+                                        <img id="slider-Img" src=" {{ $book->gallery }}" alt="Omosh">
+                                    </td>
                                 </tr>
                             </table>
+                            <!-- <button  class="bg-green-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded">
+                                Add to cart
+                            </button> -->
                         </div>
                     </div>
                 </div>
@@ -41,4 +69,11 @@
             </div>
         </div>
     </div>
+   
 </x-app-layout>
+<style>
+     #slider-Img{
+        height: 200px;
+    }
+
+</style>
